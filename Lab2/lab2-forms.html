@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Gavin Graham">
+    <meta
+        name="description"
+        content="A coffee order form created for Lab 2."
+    >
+    <title>Lab 2 – Coffee Order Form</title>
+</head>
+
+<body>
+    <main>
+        <h1>Coffee Order Form</h1>
+
+        <p>
+            Complete the form below to create your coffee order.
+        </p>
+
+        <form
+            action="https://www.w3schools.com/action_page.php"
+            method="get"
+        >
+            <p>
+                <label for="customer-name">Customer Name:</label>
+                <input
+                    type="text"
+                    id="customer-name"
+                    name="customer-name"
+                    required
+                >
+            </p>
+
+            <p>
+                <label for="email">Email Address:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
+            </p>
+
+            <p>
+                <label for="coffee-type">Coffee Type:</label>
+                <select id="coffee-type" name="coffee-type">
+                    <option value="latte">Latte</option>
+                    <option value="cappuccino">Cappuccino</option>
+                    <option value="americano">Americano</option>
+                    <option value="mocha">Mocha</option>
+                    <option value="espresso">Espresso</option>
+                </select>
+            </p>
+
+            <fieldset>
+                <legend>Size</legend>
+
+                <input
+                    type="radio"
+                    id="small"
+                    name="size"
+                    value="small"
+                    required
+                >
+                <label for="small">Small</label>
+
+                <input
+                    type="radio"
+                    id="medium"
+                    name="size"
+                    value="medium"
+                >
+                <label for="medium">Medium</label>
+
+                <input
+                    type="radio"
+                    id="large"
+                    name="size"
+                    value="large"
+                >
+                <label for="large">Large</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Extras</legend>
+
+                <input
+                    type="checkbox"
+                    id="whipped-cream"
+                    name="extras"
+                    value="whipped-cream"
+                >
+                <label for="whipped-cream">Whipped Cream</label>
+
+                <input
+                    type="checkbox"
+                    id="extra-shot"
+                    name="extras"
+                    value="extra-shot"
+                >
+                <label for="extra-shot">Extra Shot</label>
+
+                <input
+                    type="checkbox"
+                    id="almond-milk"
+                    name="extras"
+                    value="almond-milk"
+                >
+                <label for="almond-milk">Almond Milk</label>
+            </fieldset>
+
+            <p>
+                <label for="instructions">
+                    Special Instructions:
+                </label>
+                <br>
+                <textarea
+                    id="instructions"
+                    name="instructions"
+                    rows="5"
+                    cols="40"
+                ></textarea>
+            </p>
+
+            <button type="submit">Submit Order</button>
+        </form>
+
+        <p>
+            <a href="lab2-home.html">Return to Lab 2 Home</a>
+        </p>
+    </main>
+</body>
+</html>
