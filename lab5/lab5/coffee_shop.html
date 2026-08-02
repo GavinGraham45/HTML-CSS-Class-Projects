@@ -6,10 +6,6 @@
     <title>Java Haven</title>
 
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             margin: 0;
             font-family: Georgia, "Times New Roman", serif;
@@ -47,8 +43,6 @@
             grid-area: nav;
             background-color: #8b5e3c;
             padding: 1rem;
-            position: sticky;
-            top: 0;
         }
 
         .nav ul {
@@ -60,14 +54,19 @@
             gap: 2rem;
         }
 
-        .nav a {
-            color: #fff8ed;
-            text-decoration: none;
+        .nav button {
+            background-color: #fff8ed;
+            color: #5c3824;
+            border: 2px solid #5c3824;
+            border-radius: 8px;
+            padding: 0.7rem 1.2rem;
             font-weight: bold;
+            cursor: pointer;
+            font-family: Georgia, "Times New Roman", serif;
         }
 
-        .nav a:hover {
-            text-decoration: underline;
+        .nav button:hover {
+            background-color: #f5ead7;
         }
 
         .main-content {
@@ -76,9 +75,12 @@
             text-align: center;
         }
 
-        section {
-            margin-bottom: 4rem;
-            padding: 2rem;
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
         }
 
         .main-content h2 {
@@ -106,19 +108,14 @@
             box-shadow: 2px 2px 8px rgba(59, 36, 22, 0.3);
         }
 
-        .about-box,
-        .contact-box {
+        .content-box {
             background-color: #fff8ed;
             border: 2px solid #8b5e3c;
             border-radius: 12px;
             max-width: 700px;
-            margin: 0 auto;
+            margin: 2rem auto;
             padding: 1.5rem;
             box-shadow: 2px 2px 8px rgba(59, 36, 22, 0.2);
-        }
-
-        .contact-box p {
-            margin: 0.7rem 0;
         }
 
         .footer {
@@ -159,14 +156,20 @@
 
     <nav class="nav">
         <ul>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li>
+                <button onclick="showSection('menu')">Menu</button>
+            </li>
+            <li>
+                <button onclick="showSection('about')">About Us</button>
+            </li>
+            <li>
+                <button onclick="showSection('contact')">Contact</button>
+            </li>
         </ul>
     </nav>
 
     <main class="main-content">
-        <section id="menu">
+        <section id="menu" class="page-section active">
             <h2>Featured Coffees</h2>
 
             <div class="flex-container">
@@ -177,26 +180,23 @@
             </div>
         </section>
 
-        <section id="about">
+        <section id="about" class="page-section">
             <h2>About Us</h2>
 
-            <div class="about-box">
+            <div class="content-box">
                 <p>
-                    Java Haven is a cozy fictional coffee shop created for this
-                    lab. We focus on warm drinks, comfortable seating, and a
-                    relaxing atmosphere where people can study, meet friends, or
-                    enjoy a quiet cup of coffee.
+                    Java Haven is a totally real coffee shop that is totally not made up for a college lesson and you all should paypal me $20,000
                 </p>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="page-section">
             <h2>Contact</h2>
 
-            <div class="contact-box">
-                <p><strong>Email:</strong> contact@javahaven.com</p>
-                <p><strong>Phone:</strong> (216) 555-0125</p>
-                <p><strong>Address:</strong> 123 Coffee Bean Lane, Cleveland, OH</p>
+            <div class="content-box">
+                <p><strong>Email:</strong> realemail@totallylegit.com</p>
+                <p><strong>Phone:</strong> 123-456-78910</p>
+                <p><strong>Address:</strong> 7740 mushroom kingdom drive, </p>
                 <p><strong>Hours:</strong> Monday–Friday, 7:00 AM – 6:00 PM</p>
             </div>
         </section>
@@ -205,5 +205,17 @@
     <footer class="footer">
         <p>&copy; 2025 Java Haven. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll(".page-section");
+
+            sections.forEach(function(section) {
+                section.classList.remove("active");
+            });
+
+            document.getElementById(sectionId).classList.add("active");
+        }
+    </script>
 </body>
 </html>
