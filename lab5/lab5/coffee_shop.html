@@ -6,6 +6,10 @@
     <title>Java Haven</title>
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: Georgia, "Times New Roman", serif;
@@ -43,6 +47,8 @@
             grid-area: nav;
             background-color: #8b5e3c;
             padding: 1rem;
+            position: sticky;
+            top: 0;
         }
 
         .nav ul {
@@ -70,13 +76,14 @@
             text-align: center;
         }
 
+        section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+        }
+
         .main-content h2 {
             font-size: 2rem;
             color: #5c3824;
-        }
-
-        section {
-            margin-bottom: 3rem;
         }
 
         .flex-container {
@@ -97,6 +104,21 @@
             font-size: 1.2rem;
             font-weight: bold;
             box-shadow: 2px 2px 8px rgba(59, 36, 22, 0.3);
+        }
+
+        .about-box,
+        .contact-box {
+            background-color: #fff8ed;
+            border: 2px solid #8b5e3c;
+            border-radius: 12px;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 1.5rem;
+            box-shadow: 2px 2px 8px rgba(59, 36, 22, 0.2);
+        }
+
+        .contact-box p {
+            margin: 0.7rem 0;
         }
 
         .footer {
@@ -156,22 +178,27 @@
         </section>
 
         <section id="about">
-            <h2>About Java Haven</h2>
+            <h2>About Us</h2>
 
-            <p>
-                Java Haven is a fictional coffee shop created for this lab.
-                This page uses CSS Grid for the overall page layout and Flexbox
-                to arrange the featured coffee items.
-            </p>
+            <div class="about-box">
+                <p>
+                    Java Haven is a cozy fictional coffee shop created for this
+                    lab. We focus on warm drinks, comfortable seating, and a
+                    relaxing atmosphere where people can study, meet friends, or
+                    enjoy a quiet cup of coffee.
+                </p>
+            </div>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
 
-            <p>
-                Visit Java Haven for fresh coffee, comfortable seating, and a
-                relaxing place to study or meet with friends.
-            </p>
+            <div class="contact-box">
+                <p><strong>Email:</strong> contact@javahaven.com</p>
+                <p><strong>Phone:</strong> (216) 555-0125</p>
+                <p><strong>Address:</strong> 123 Coffee Bean Lane, Cleveland, OH</p>
+                <p><strong>Hours:</strong> Monday–Friday, 7:00 AM – 6:00 PM</p>
+            </div>
         </section>
     </main>
 
