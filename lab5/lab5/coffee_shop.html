@@ -75,6 +75,10 @@
             color: #5c3824;
         }
 
+        section {
+            margin-bottom: 3rem;
+        }
+
         .flex-container {
             display: flex;
             justify-content: center;
@@ -139,18 +143,39 @@
         </ul>
     </nav>
 
-    <main class="main-content" id="menu">
-        <h2>Featured Coffees</h2>
+    <main class="main-content">
+        <section id="menu">
+            <h2>Featured Coffees</h2>
 
-        <div class="flex-container">
-            <div class="flex-item">Espresso</div>
-            <div class="flex-item">Cappuccino</div>
-            <div class="flex-item">Latte</div>
-            <div class="flex-item">Mocha</div>
-        </div>
+            <div class="flex-container">
+                <div class="flex-item">Espresso</div>
+                <div class="flex-item">Cappuccino</div>
+                <div class="flex-item">Latte</div>
+                <div class="flex-item">Mocha</div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Java Haven</h2>
+
+            <p>
+                Java Haven is a fictional coffee shop created for this lab.
+                This page uses CSS Grid for the overall page layout and Flexbox
+                to arrange the featured coffee items.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+
+            <p>
+                Visit Java Haven for fresh coffee, comfortable seating, and a
+                relaxing place to study or meet with friends.
+            </p>
+        </section>
     </main>
 
-    <footer class="footer" id="contact">
+    <footer class="footer">
         <p>&copy; 2025 Java Haven. All Rights Reserved.</p>
     </footer>
 </body>
